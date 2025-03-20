@@ -18,9 +18,9 @@ const CrewPage = () => {
         <figcaption>
           <div className="crew-content-text">
             <div>
-              <p className="role">{selectCrew?.role}</p>
-              <h2 className="name">{selectCrew?.name}</h2>
-              <p className="bio">{selectCrew?.bio}</p>
+              <p className="crew-role">{selectCrew?.role}</p>
+              <h2 className="crew-name">{selectCrew?.name}</h2>
+              <p className="crew-bio">{selectCrew?.bio}</p>
             </div>
           </div>
           <nav className="nav-crew">
