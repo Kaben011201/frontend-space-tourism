@@ -3,7 +3,6 @@ import logoIcon from "../assets/shared/logo.svg";
 
 const Header = () => {
   const path = useLocation().pathname;
-  console.log(path);
   return (
     <header>
       <img src={logoIcon} alt="logo" />

@@ -1,0 +1,50 @@
+.destination-container
+  max-width 78%
+  margin 3rem auto
+.destination-content
+  display flex
+  gap 2rem
+  margin 0 auto
+  max-width 75rem
+  height calc(100vh - 18rem)
+  .destination-image
+    display flex
+    align-items center
+    margin 0 auto
+    max-width 27.813rem
+  figcaption
+    max-width 27.813rem
+    display flex
+    flex-direction column
+    justify-content center
+    gap 2.5rem
+    margin 0 auto
+    .nav-destination
+      {barlowcondensed}
+      display flex
+      gap 2rem
+      color blue-300 
+      li
+        cursor default
+        @extend .navigation
+    .destination-content-text
+      h2
+        {bellefair}
+        font-size 6rem
+        margin 0
+      p
+        {barlow}
+    .destination-info
+      display flex  
+      gap 1.5rem
+      .destination-info-text > * + *
+        margin-top 0.75rem
+      .destination-info-text 
+        width 100%
+        h3
+          {barlowcondensed}
+          font-size 1rem
+          color blue-300
+        p
+          {bellefair}
+          font-size 1.75rem

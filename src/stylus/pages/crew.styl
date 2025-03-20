@@ -1,0 +1,51 @@
+.crew-container
+  max-width 78%
+  margin 3rem auto
+.crew-content
+  display flex
+  margin 0 auto
+  max-width 75rem
+  gap 2rem
+  height calc(100vh - 18rem)
+  figcaption
+    max-width 35rem
+    display flex
+    flex-direction column
+    justify-content space-between
+    .crew-content-text
+      height 100%
+      display flex
+      flex-direction column
+      justify-content center
+      .role, .name
+        {bellefair}
+      .role
+        font-size 2rem
+        margin 0
+        opacity 0.5042
+      .name
+        font-size 3.5rem
+        margin-top 1rem
+        margin-bottom 0
+      .bio
+        {barlow}
+    .nav-crew
+      display flex
+      gap 2.5rem
+      font-size 2.5rem
+      cursor pointer
+      ul
+        margin 0
+        li
+          opacity 0.5042
+          &:hover, &.active
+            opacity 1
+
+  .crew-image
+    display flex
+    align-items center
+    margin 0 auto
+    img
+      max-height 42.25rem
+      height 100%
+      mask-image linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)

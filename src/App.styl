@@ -1,219 +1,42 @@
-//NOTE - Global Styles
-barlow = "Barlow", sans-serif;
-barlow-condensed = "Barlow Condensed";
-bellefair = "Bellefair", serif;
-
+//NOTE - Global Variables
 white-hover = rgba(252, 252, 252, 0.5)
 blue-300 = #D0D6F9
 
-//SECTION - Main Layout
-.bg-container
-  width 100%
-  min-height 100vh
-  background-size cover
-  background-position center
-  background-repeat no-repeat
-  transition background-image 0.5s ease-in-out
+barlowcondensed = @block {
+  font-family: "Barlow Condensed";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight normal
+}
 
-  // Responsive breakpoints
-  @media (max-width: 767px)
-    &.home
-      background-image url('/src/assets/home/background-home-mobile.jpg')
-    &.destination
-      background-image url('/src/assets/destination/background-destination-mobile.jpg')
-    &.crew
-      background-image url('/src/assets/crew/background-crew-mobile.jpg')
-    &.technology
-      background-image url('/src/assets/technology/background-technology-mobile.jpg')
+bellefair = @block {
+  font-family: "Bellefair";
+  text-transform uppercase
+  font-weight normal
+}
 
-  @media (min-width: 768px)
-    &.home
-      background-image url('/src/assets/home/background-home-tablet.jpg')
-    &.destination
-      background-image url('/src/assets/destination/background-destination-tablet.jpg')
-    &.crew
-      background-image url('/src/assets/crew/background-crew-tablet.jpg')
-    &.technology
-      background-image url('/src/assets/technology/background-technology-tablet.jpg')
-  @media (min-width: 1024px)
-    &.home
-      background-image url('/src/assets/home/background-home-desktop.jpg')
-    &.destination
-      background-image url('/src/assets/destination/background-destination-desktop.jpg')
-    &.crew
-      background-image url('/src/assets/crew/background-crew-desktop.jpg')
-    &.technology
-      background-image url('/src/assets/technology/background-technology-desktop.jpg')
+barlow = @block {
+  font-family "Barlow", sans-serif
+  font-size 1.125rem
+  line-height 180%
+  color blue-300
+}
 
-//SECTION - Header
-header
-  display flex
-  align-items center
-  padding-top 2.5rem
-  img
-    padding 0 4rem
-  
-.hr-line
-  border 1px solid white
-  opacity 0.25
-  width 100%
-  margin-right -2rem
-  z-index 1
-  backdrop-filter: blur(0px)
+// Nte - Global Styles
+.navigation 
+  transition all 0.5s ease-in-out
+  border-bottom 3px solid transparentify(white, 0)
+  &.active, &:hover
+    border-bottom 3px solid white !important
+    color white
+  &:hover
+    cursor pointer
 
-.nav-container
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(40px);
-  padding 0 4rem
-  width 100%
-  max-width 42rem
-  font-family barlow-condensed 
-  font-size 16px
-  letter-spacing 2px
-  ul
-    display flex
-    justify-content end
-    align-items center
-    gap 3rem
-    a
-      text-decoration none
-      color white
-      display flex
-      align-items center
-      gap 0.75rem
-      height 6rem
-      margin -1rem 0
-      border-bottom 3px solid transparentify(white, 0)
-      transition all 0.5s ease-in-out
-      &.active
-        border-bottom 3px solid white !important
-      &:hover
-        border-bottom 3px solid white-hover
 
-//SECTION - Home Page
-.home-container
-  padding 8rem
-  .home-content
-    max-width 75rem
-    height calc(100vh - 30rem)
-    margin 7rem auto 0 auto
-    display flex
-    align-items flex-end
-    gap 1rem
-    justify-content space-between
-    .home-text
-      max-width 34rem
-      .pre-question
-        font-family barlow-condensed
-        font-size 1.75rem
-        letter-spacing 4px
-        color blue-300
-      .last-question
-        font-family bellefair
-        font-size 9rem
-        margin 0
-        color white
-        border none
-        font-weight normal
-      .description
-        font-family barlow
-        font-size 1.125rem
-        line-height 180%
-        color blue-300
-    .explore-btn
-      font-family bellefair
-      font-size 2rem
-      border-radius 50%
-      background-color white
-      height 17rem
-      width 17rem
-      border none
-      cursor pointer
-      transition box-shadow 0.3s ease, opacity 0.3s ease
-
-      &:hover
-        box-shadow 0 0 0 80px rgba(252, 252, 252, 0.1)
-        opacity 0.9
-
-//SECTION - Destination Page
-.destination-container
-  color white
-  max-width 78%
-  margin 3rem auto
-  h1
-    font-family barlow-condensed
-    letter-spacing 2px
-    font-weight normal
-    font-size 1.75rem
-    span
-      font-weight bold
-      opacity 0.25
-      margin-right 1.5rem
-.destination-content
-  display flex
-  gap 2rem
-  margin 0 auto
-  max-width 75rem
-  height calc(100vh - 18rem)
-  .destination-image
-    display flex
-    align-items center
-    margin 0 auto
-    max-width 27.813rem
-  figcaption
-    max-width 27.813rem
-    display flex
-    flex-direction column
-    justify-content center
-    gap 2.5rem
-    margin 0 auto
-    hr
-      width 100%
-    .nav-destination
-      display flex
-      font-family barlow-condensed
-      text-transform uppercase
-      gap 2rem
-      letter-spacing 2px
-      color blue-300
-      // border-bottom 3px solid transparentify(white, 0)
-      transition all 0.5s ease-in-out
-      li
-        cursor default
-        &.active
-          border-bottom 3px solid white !important
-          color white
-        &:hover
-          border-bottom 3px solid white-hover
-          color white
-          cursor pointer
-    .destination-content-text
-      h2
-        font-family bellefair
-        font-size 6rem
-        text-transform uppercase
-        margin 0
-        font-weight normal
-      p
-        font-family barlow
-        font-size 1.125rem
-        line-height 180%
-        color blue-300
-    .destination-info
-      display flex  
-      gap 1.5rem
-      .destination-info-text > * + *
-        margin-top 0.75rem
-      .destination-info-text 
-        width 100%
-        h3
-          font-family barlow-condensed
-          letter-spacing 2px
-          font-size 1rem
-          font-weight normal
-          color blue-300
-        p
-          font-family bellefair
-          text-transform uppercase
-          font-size 1.75rem
+//SECTION - Layout
+@import "./stylus/layouts/*"
+//SECTION - Pages
+@import "./stylus/pages/*"
+//SECTION - Components
+@import "./stylus/components/*"
 

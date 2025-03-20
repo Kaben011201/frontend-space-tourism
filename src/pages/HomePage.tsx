@@ -1,9 +1,8 @@
-import MainLayout from "../layout/MainLayout";
+import MainLayout from "../layouts/MainLayout";
 
 const HomePage = () => {
   return (
     <MainLayout className="home-container">
-      <div className="home-content">
         <div className="home-text">
           <p className="pre-question">SO, YOU WANT TO TRAVEL TO</p>
           <h1 className="last-question">SPACE</h1>
@@ -17,7 +16,6 @@ const HomePage = () => {
         <div className="explore-container">
           <button className="explore-btn">EXPLORE</button>
         </div>
-      </div>
     </MainLayout>
   );
 };
