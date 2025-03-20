@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import logoIcon from "../assets/shared/logo.svg";
+import logoIcon from "/assets/shared/logo.svg";
 
 const Header = () => {
   const path = useLocation().pathname;
